@@ -10,7 +10,7 @@ interface Props {
 export const Product: FC<Props> = ({ product }) => {
   return (
     <div className={styles.container}>
-      <img src={product.image} alt={product.name} />
+      <img className={styles.image} src={product.image} alt={product.name} />
     </div>
   );
 };
