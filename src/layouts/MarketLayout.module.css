@@ -1,0 +1,15 @@
+@import ('../globals.css');
+
+.container {
+  padding: 1rem;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 2rem;
+}
+
+.logo_container {
+  display: flex;
+}
