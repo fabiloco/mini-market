@@ -1,18 +1,19 @@
 import { Outlet } from 'react-router-dom';
 
-import { Logo } from '../componets';
+import { Navbar, Text } from '../componets';
+import { ProductsView } from '../products';
 
 import styles from './MarketLayout.module.css';
 
 export const MarketLayout = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.logo_container}>
-        <Logo />
-        logo
+      <Navbar />
+      <div className={styles.products_container}>
+        <ProductsView />
       </div>
-      <div>
-        <button>cart</button>
+      <div className={styles.view_container}>
+        <Outlet />
       </div>
     </div>
   );

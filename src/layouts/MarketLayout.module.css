@@ -1,15 +1,10 @@
-@import ('../globals.css');
-
 .container {
-  padding: 1rem;
-  background-color: var(--background);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 2rem;
+  flex-direction: column;
 }
 
-.logo_container {
-  display: flex;
+.products_container,
+.view_container {
+  padding: 1rem;
+  padding-top: 0;
 }

@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  box-sizing: border-box;
   --primary: #a718ba;
   --background: #ffffff;
 }
@@ -9,10 +8,10 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .app {
   width: 100vw;
   height: 100vh;
-  background-color: red;
 }
