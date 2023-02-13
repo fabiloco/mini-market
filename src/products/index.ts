@@ -1,2 +1,3 @@
-export * from './ProductsView';
-export * from './Product';
+export * from './ProductSelector';
+export * from './ProductCard';
+export * from './ProductDetails';

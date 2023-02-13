@@ -7,7 +7,7 @@ interface Props {
   product: IProduct;
 }
 
-export const Product: FC<Props> = ({ product }) => {
+export const ProductCard: FC<Props> = ({ product }) => {
   return (
     <div className={styles.container}>
       <img className={styles.image} src={product.image} alt={product.name} />

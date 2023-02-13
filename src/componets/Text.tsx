@@ -4,7 +4,7 @@ interface Props {
   children: string;
   size?: string;
   props?: CSSProperties;
-  color?: 'white' | 'primary' | 'black';
+  color?: 'white' | 'primary' | 'black' | 'caption';
 }
 
 export const Text: FC<Props> = ({
@@ -13,7 +13,8 @@ export const Text: FC<Props> = ({
   props,
   color = 'black',
 }) => {
-  const textColor = color === 'primary' ? '#a718ba' : color;
+  const textColor =
+    color === 'primary' ? '#a718ba' : color === 'caption' ? '#757575' : color;
 
   return (
     <p style={{ fontSize: size, color: textColor, ...props }}>{children}</p>

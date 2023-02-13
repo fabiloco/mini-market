@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
-import { Navbar, Text } from '../componets';
-import { ProductsView } from '../products';
+import { Divider, Navbar, Text } from '../componets';
+import { ProductSelector } from '../products';
 
 import styles from './MarketLayout.module.css';
 
@@ -10,9 +10,14 @@ export const MarketLayout = () => {
     <div className={styles.container}>
       <Navbar />
       <div className={styles.products_container}>
-        <ProductsView />
+        <ProductSelector />
       </div>
       <div className={styles.view_container}>
+        <Text color='primary' props={{ marginBottom: '0.4rem' }}>
+          Products
+        </Text>
+
+        <Divider props={{ marginBottom: '0.8rem' }} />
         <Outlet />
       </div>
     </div>
