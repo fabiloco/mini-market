@@ -24,7 +24,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
 
   const onClickCard = () => {
     dispatch(onSetActiveProduct(product));
-    navigate(`/${product.slug}`);
+    navigate(`/product/${product.slug}`);
   };
 
   return (

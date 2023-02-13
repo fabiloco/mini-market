@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { CartDetails } from '../cart/CartDetails';
 
-import { Text } from '../componets';
+import { Divider, Text } from '../componets';
 
-import { MarketLayout } from '../layouts/MarketLayout';
+import { MarketLayout } from '../layouts';
 
 import { ProductDetails } from '../products';
 
@@ -19,15 +20,19 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path='/' element={<MarketLayout />}>
-        <Route path='/:slug' element={<ProductDetails />} />
+        <Route path='/product/:slug' element={<ProductDetails />} />
         <Route
           path='/'
           element={
-            <Text color='caption' size='0.8rem'>
-              Please choose a product from the product list
-            </Text>
+            <div>
+              <Divider props={{ marginBottom: '0.8rem' }} />
+              <Text color='caption' size='0.8rem'>
+                Please choose a product from the product list
+              </Text>
+            </div>
           }
         />
+        <Route path='/cart' element={<CartDetails />} />
       </Route>
     </Routes>
   );

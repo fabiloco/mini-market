@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import { Divider, Navbar, Text } from '../componets';
+import { Navbar } from '../componets';
 import { ProductSelector } from '../products';
 
 import styles from './MarketLayout.module.css';
@@ -13,11 +13,6 @@ export const MarketLayout = () => {
         <ProductSelector />
       </div>
       <div className={styles.view_container}>
-        <Text bold color='primary' props={{ marginBottom: '0.4rem' }}>
-          Products
-        </Text>
-
-        <Divider props={{ marginBottom: '0.8rem' }} />
         <Outlet />
       </div>
     </div>
