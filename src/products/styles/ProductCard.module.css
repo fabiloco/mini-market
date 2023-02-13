@@ -1,0 +1,19 @@
+@import ('../../globals.css');
+
+.container {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.image {
+  width: 100%;
+}
+
+.selected {
+  border: 1px solid var(--primary);
+  box-shadow: var(--primary-alpha) 0px 7px 29px 0px;
+}

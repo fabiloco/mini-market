@@ -1,7 +1,10 @@
-@import ('../../globals.css');
-
 .container {
-  background-color: var(--primary);
+  background: rgb(167, 24, 186);
+  background: linear-gradient(
+    155deg,
+    rgba(167, 24, 186, 1) 22%,
+    rgba(120, 7, 135, 1) 83%
+  );
   border: none;
   width: 3rem;
   height: 3rem;

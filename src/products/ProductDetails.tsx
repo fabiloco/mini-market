@@ -1,18 +1,39 @@
 import { MdAdd, MdRemove } from 'react-icons/md';
 import { Navigate } from 'react-router-dom';
 import { Button, Divider, Text } from '../componets';
-import { useAppSelector } from '../store/hooks';
+
+import { useAppDispatch, useAppSelector } from '../store/hooks';
+import {
+  onAddCartProduct,
+  onRemoveCartProduct,
+} from '../store/slices/products';
+
 import styles from './styles/ProductDetails.module.css';
 
 export const ProductDetails = () => {
-  const { activeProduct } = useAppSelector((state) => state.products);
+  const { activeProduct, cart } = useAppSelector((state) => state.products);
+
+  const dispatch = useAppDispatch();
+
+  const productQuantity =
+    cart.find((cartProduct) => cartProduct.slug === activeProduct?.slug)
+      ?.quantity || 0;
 
   if (!activeProduct) {
     return <Navigate to='/' />;
   }
 
+  const onAdd = () => {
+    dispatch(onAddCartProduct(activeProduct));
+  };
+
+  const onRemove = () => {
+    dispatch(onRemoveCartProduct(activeProduct));
+  };
+
   return (
     <div className={styles.container}>
+      <div className={styles.quantity}>{productQuantity}</div>
       <img className={styles.image} src={activeProduct.image} />
       <div className={styles.info_container}>
         <div className={styles.info}>
@@ -23,10 +44,10 @@ export const ProductDetails = () => {
           </Text>
         </div>
         <div className={styles.actions}>
-          <Button>
+          <Button onClick={onRemove}>
             <MdRemove />
           </Button>
-          <Button colorSchema='primary'>
+          <Button colorSchema='primary' onClick={onAdd}>
             <MdAdd />
           </Button>
         </div>

@@ -34,3 +34,15 @@
   border-radius: 50%;
   background-color: var(--primary-alpha);
 }
+
+.quantity {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+}
