@@ -7,6 +7,7 @@ import {
   onAddCartProduct,
   onRemoveCartProduct,
 } from '../store/slices/products';
+import { currency } from '../utils';
 
 import styles from './styles/ProductDetails.module.css';
 
@@ -40,7 +41,7 @@ export const ProductDetails = () => {
           <Text bold>{activeProduct.name}</Text>
           <div className={styles.dot} />
           <Text color='primary' bold>
-            {activeProduct.price}
+            {currency.format(activeProduct.price)}
           </Text>
         </div>
         <div className={styles.actions}>

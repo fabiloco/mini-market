@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { IProduct, products } from '../../../constants/products';
 
-interface ICart extends IProduct {
+export interface ICart extends IProduct {
   quantity: number;
 }
 
@@ -12,10 +12,14 @@ export interface IActiveProfileSlice {
   cart: ICart[];
 }
 
+const cartProducts = JSON.parse(
+  localStorage.getItem('cart') || '[]'
+) as ICart[];
+
 const initialState: IActiveProfileSlice = {
   products: products,
   activeProduct: undefined,
-  cart: [],
+  cart: cartProducts,
 };
 
 export const productsSlice = createSlice({
@@ -24,6 +28,9 @@ export const productsSlice = createSlice({
   reducers: {
     onSetActiveProduct: (state, action: PayloadAction<IProduct>) => {
       state.activeProduct = action.payload;
+    },
+    onSetCart: (state, action: PayloadAction<ICart[]>) => {
+      state.cart = action.payload;
     },
     onAddCartProduct: (state, action: PayloadAction<IProduct>) => {
       const cartContainProduct = state.cart.find(
@@ -68,5 +75,9 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { onSetActiveProduct, onAddCartProduct, onRemoveCartProduct } =
-  productsSlice.actions;
+export const {
+  onSetActiveProduct,
+  onAddCartProduct,
+  onRemoveCartProduct,
+  onSetCart,
+} = productsSlice.actions;
