@@ -5,11 +5,13 @@ import { IProduct, products } from '../../../constants/products';
 export interface IActiveProfileSlice {
   products: IProduct[];
   activeProduct: IProduct | undefined;
+  cart: IProduct[];
 }
 
 const initialState: IActiveProfileSlice = {
   products: products,
   activeProduct: undefined,
+  cart: [],
 };
 
 export const productsSlice = createSlice({

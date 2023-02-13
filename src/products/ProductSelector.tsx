@@ -11,7 +11,7 @@ export const ProductSelector = () => {
 
   return (
     <div className={styles.container}>
-      <Text color='primary' props={{ marginBottom: '0.4rem' }}>
+      <Text bold color='primary' props={{ marginBottom: '0.4rem' }}>
         Store
       </Text>
 

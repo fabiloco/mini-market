@@ -13,7 +13,7 @@ export const MarketLayout = () => {
         <ProductSelector />
       </div>
       <div className={styles.view_container}>
-        <Text color='primary' props={{ marginBottom: '0.4rem' }}>
+        <Text bold color='primary' props={{ marginBottom: '0.4rem' }}>
           Products
         </Text>
 

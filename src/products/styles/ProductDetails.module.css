@@ -1,4 +1,36 @@
+@import ('../../globals.css');
+
 .container {
   display: flex;
   width: 100%;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  height: 12rem;
+  object-fit: contain;
+}
+
+.info_container {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+}
+
+.dot {
+  margin: 0 0.4rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--primary-alpha);
 }

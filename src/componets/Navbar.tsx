@@ -11,7 +11,9 @@ export const Navbar = () => {
         <Logo />
       </div>
       <div>
-        <Button icon={<MdShoppingCart />}>$0.0</Button>
+        <Button colorSchema='primary' icon={<MdShoppingCart />}>
+          $0.0
+        </Button>
       </div>
     </div>
   );

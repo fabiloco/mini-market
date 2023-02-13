@@ -1,10 +1,6 @@
-@import ('../../globals.css');
-
 .button {
   padding: 0.3rem 0.4rem;
   border: none;
-  background-color: var(--primary);
-  color: var(--background);
   display: flex;
   align-items: center;
 }

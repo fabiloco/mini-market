@@ -1,10 +1,11 @@
-import { CSSProperties, FC } from 'react';
+import { CSSProperties, FC, ReactNode } from 'react';
 
 interface Props {
-  children: string;
+  children: ReactNode;
   size?: string;
   props?: CSSProperties;
   color?: 'white' | 'primary' | 'black' | 'caption';
+  bold?: boolean;
 }
 
 export const Text: FC<Props> = ({
@@ -12,11 +13,21 @@ export const Text: FC<Props> = ({
   size = '1rem',
   props,
   color = 'black',
+  bold = false,
 }) => {
   const textColor =
     color === 'primary' ? '#a718ba' : color === 'caption' ? '#757575' : color;
 
   return (
-    <p style={{ fontSize: size, color: textColor, ...props }}>{children}</p>
+    <p
+      style={{
+        fontSize: size,
+        color: textColor,
+        fontWeight: bold ? 600 : 400,
+        ...props,
+      }}
+    >
+      {children}
+    </p>
   );
 };
