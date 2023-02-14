@@ -37,8 +37,8 @@ export const ProductDetails = () => {
       <Text bold color='primary' props={{ marginBottom: '0.4rem' }}>
         Products
       </Text>
-
       <Divider props={{ marginBottom: '0.8rem' }} />
+
       <div className={styles.container}>
         <div className={styles.quantity}>{productQuantity}</div>
         <img className={styles.image} src={activeProduct.image} />

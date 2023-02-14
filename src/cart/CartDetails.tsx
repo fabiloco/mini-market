@@ -1,7 +1,8 @@
-import { Button, Divider, Text } from '../componets';
+import { useRef } from 'react';
+import { Divider, Text } from '../componets';
+import { useWompi } from '../hooks';
 
 import { useAppSelector } from '../store/hooks';
-
 import { currency } from '../utils';
 
 import styles from './styles/CartDetails.module.css';
@@ -13,6 +14,10 @@ export const CartDetails = () => {
     (prev, current) => current.price * current.quantity + prev,
     0
   );
+
+  const wompiContainerRef = useRef<HTMLDivElement>(null);
+
+  useWompi(wompiContainerRef, `${subTotal.toString()}00`);
 
   return (
     <div>
@@ -49,6 +54,7 @@ export const CartDetails = () => {
           </Text>
         </div>
       </div>
+      <div ref={wompiContainerRef}></div>
     </div>
   );
 };
