@@ -9,4 +9,9 @@
   width: 3rem;
   height: 3rem;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.container:active {
+  transform: scale(0.95);
 }

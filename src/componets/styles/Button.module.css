@@ -3,8 +3,19 @@
   border: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .icon_container {
   margin-right: 0.3rem;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:active {
+  transform: scale(0.9);
+  filter: brightness(0.95);
 }

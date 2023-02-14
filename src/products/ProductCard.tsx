@@ -33,7 +33,12 @@ export const ProductCard: FC<Props> = ({ product }) => {
       onClick={onClickCard}
     >
       {productQuantity && (
-        <div className={styles.quantity}>{productQuantity}</div>
+        <div
+          className={`${styles.quantity} ${styles['scale-in-center']}`}
+          key={productQuantity}
+        >
+          {productQuantity}
+        </div>
       )}
       <img className={styles.image} src={product.image} alt={product.name} />
     </div>
