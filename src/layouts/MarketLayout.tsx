@@ -9,11 +9,13 @@ export const MarketLayout = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <div className={styles.products_container}>
-        <ProductSelector />
-      </div>
-      <div className={styles.view_container}>
-        <Outlet />
+      <div className={styles.layout_container}>
+        <div className={styles.products_container}>
+          <ProductSelector />
+        </div>
+        <div className={styles.view_container}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );

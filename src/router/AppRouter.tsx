@@ -25,7 +25,9 @@ export const AppRouter = () => {
           path='/'
           element={
             <div>
-              <Divider props={{ marginBottom: '0.8rem' }} />
+              <Divider
+                props={{ marginBottom: '0.8rem', marginTop: '1.6rem' }}
+              />
               <Text color='caption' size='0.8rem'>
                 Please choose a product from the product list
               </Text>

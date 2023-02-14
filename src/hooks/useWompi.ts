@@ -16,10 +16,14 @@ export const useWompi = (container: RefObject<HTMLElement>, amount: string) => {
     script.dataset['signature:integrity'] =
       '37c8407747e595535433ef8f6a811d853cd943046624a0ec04662b17bbf33bf5';
 
-    container.current!.appendChild(script);
+    if (container.current) {
+      container.current.appendChild(script);
+    }
 
     return () => {
-      container.current!.removeChild(script);
+      if (container.current) {
+        container.current!.removeChild(script);
+      }
     };
   }, [container]);
 };
