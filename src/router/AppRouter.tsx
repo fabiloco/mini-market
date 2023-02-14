@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { CartDetails } from '../cart/CartDetails';
 
 import { Divider, Text } from '../componets';
 
 import { MarketLayout } from '../layouts';
 
 import { ProductDetails } from '../products';
+import { CartDetails } from '../cart';
 
 import { useAppSelector } from '../store/hooks';
 

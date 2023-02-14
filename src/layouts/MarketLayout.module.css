@@ -10,6 +10,9 @@
   padding: 1rem;
   padding-top: 0;
   overflow: auto;
+}
+
+.products_container {
   height: calc(100vh - 80px);
 }
 
