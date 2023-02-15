@@ -2,6 +2,8 @@
 
 Simple market app with mobile first styles and a shopping cart managment implemented with Redux.
 
+![app image](./image.jpeg)
+
 ## Getting started
 
 To run this project, you must clone down this repository. You will also need `node` and `npm` installed globally on your machine.
@@ -34,6 +36,7 @@ This application was built with the following stack
 - Typescript
 - Redux
 - Vite
+- Vitest (testing library)
 
 ## Deploy
 
