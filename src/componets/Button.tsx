@@ -7,9 +7,16 @@ interface Props {
   icon?: ReactNode;
   colorSchema?: 'primary' | 'default';
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  dataTestId?: string;
 }
 
-export const Button: FC<Props> = ({ children, icon, colorSchema, onClick }) => {
+export const Button: FC<Props> = ({
+  children,
+  icon,
+  colorSchema,
+  onClick,
+  dataTestId,
+}) => {
   const background = colorSchema === 'primary' ? '#a718ba' : '#eeeeee';
   const color = colorSchema === 'primary' ? '#ffffff' : '#000000';
 
@@ -18,6 +25,7 @@ export const Button: FC<Props> = ({ children, icon, colorSchema, onClick }) => {
       className={styles.button}
       style={{ background, color }}
       onClick={onClick}
+      data-testid={dataTestId}
     >
       {icon && <div className={styles.icon_container}>{icon}</div>}
       {children}

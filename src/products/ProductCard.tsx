@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { IProduct } from '../constants/products';
+import { IProduct, products } from '../constants/products';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { onSetActiveProduct } from '../store/slices/products';
 
@@ -29,11 +29,13 @@ export const ProductCard: FC<Props> = ({ product }) => {
 
   return (
     <div
+      data-testid={`product-card-${product.slug}`}
       className={`${styles.container} ${isSelected ? styles.selected : ''}`}
       onClick={onClickCard}
     >
       {productQuantity && (
         <div
+          data-testid={`product-card-quantity-${product.slug}`}
           className={`${styles.quantity} ${styles['scale-in-center']}`}
           key={productQuantity}
         >

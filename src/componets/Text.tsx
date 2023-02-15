@@ -6,6 +6,7 @@ interface Props {
   props?: CSSProperties;
   color?: 'white' | 'primary' | 'black' | 'caption';
   bold?: boolean;
+  dataTestId?: string;
 }
 
 export const Text: FC<Props> = ({
@@ -14,6 +15,7 @@ export const Text: FC<Props> = ({
   props,
   color = 'black',
   bold = false,
+  dataTestId,
 }) => {
   const textColor =
     color === 'primary' ? '#a718ba' : color === 'caption' ? '#757575' : color;
@@ -26,6 +28,7 @@ export const Text: FC<Props> = ({
         fontWeight: bold ? 600 : 400,
         ...props,
       }}
+      data-testid={dataTestId}
     >
       {children}
     </p>

@@ -40,21 +40,25 @@ export const ProductDetails = () => {
       <Divider props={{ marginBottom: '0.8rem' }} />
 
       <div className={styles.container}>
-        <div className={styles.quantity}>{productQuantity}</div>
+        <div data-testid='product-details-quantity' className={styles.quantity}>
+          {productQuantity}
+        </div>
         <img className={styles.image} src={activeProduct.image} />
         <div className={styles.info_container}>
           <div className={styles.info}>
-            <Text bold>{activeProduct.name}</Text>
+            <Text dataTestId='product-details-title' bold>
+              {activeProduct.name}
+            </Text>
             <div className={styles.dot} />
             <Text color='primary' bold>
               {currency.format(activeProduct.price)}
             </Text>
           </div>
           <div className={styles.actions}>
-            <Button onClick={onRemove}>
+            <Button dataTestId='remove-btn' onClick={onRemove}>
               <MdRemove />
             </Button>
-            <Button colorSchema='primary' onClick={onAdd}>
+            <Button dataTestId='add-btn' colorSchema='primary' onClick={onAdd}>
               <MdAdd />
             </Button>
           </div>
