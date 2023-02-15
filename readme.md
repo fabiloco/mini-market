@@ -1,6 +1,6 @@
 ## Mini Market App
 
-Simple market app with shopping cart managment implemented with Redux and mobile first styles.
+Simple market app with mobile first styles and a shopping cart managment implemented with Redux.
 
 ## Getting started
 
@@ -33,3 +33,10 @@ This application was built with the following stack
 - React
 - Typescript
 - Redux
+- Vite
+
+## Deploy
+
+This application is currently hosted in the free service surge.sh
+
+`https://fabiloco-mini-market.surge.sh/`
